@@ -1,6 +1,7 @@
 import './App.css'
 import { useTasks } from './hooks/useTasks'
 import { TaskForm } from './components/TaskForm/TaskForm'
+import { TaskList } from './components/TaskList/TaskList'
 
 const taskOneChecklist = [
   'Proyecto React con TypeScript inicializado',
@@ -10,7 +11,7 @@ const taskOneChecklist = [
 ]
 
 function App() {
-  const { createTask } = useTasks()
+  const { tasks, createTask } = useTasks()
 
   return (
     <div className="app-shell">
@@ -43,10 +44,11 @@ function App() {
 
         <TaskForm onCreateTask={createTask} />
 
+        <TaskList tasks={tasks} />
+
         <section className="panel">
           <h2>Siguientes bloques del MVP</h2>
           <div className="next-steps">
-            <span>Lista de tareas</span>
             <span>Cálculo ICE</span>
             <span>Revisión con IA</span>
           </div>
