@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "commitlint": "commitlint --from=HEAD~1",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,6 +15,8 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
     "@eslint/js": "^9.39.4",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",

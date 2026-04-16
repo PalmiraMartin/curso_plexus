@@ -1,4 +1,5 @@
 import './App.css'
+import { useTasks } from './hooks/useTasks'
 
 const taskOneChecklist = [
   'Proyecto React con TypeScript inicializado',
@@ -8,6 +9,8 @@ const taskOneChecklist = [
 ]
 
 function App() {
+  useTasks() // Hook inicializado para preparar la API centralizada
+
   return (
     <div className="app-shell">
       <header className="hero-section">
